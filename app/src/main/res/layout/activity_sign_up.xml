@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/loginBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30"
+        android:layout_marginTop="@dimen/dimen_30"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewSignIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:text="@string/create_new_account"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/first_name"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSignIn" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/last_name"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/phone_number"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextLastName" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/enter_email_id"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhoneNumber" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextPassword"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/password"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTextRePassword"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_50"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__gray_stoke_button_bg_40"
+                android:hint="@string/password"
+                android:maxLines="1"
+                android:padding="@dimen/dimen_10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_dark"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutLogin"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_45"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@drawable/drawable__details_button_40"
+                android:elevation="@dimen/dimen_5"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/editTextRePassword">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signup"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

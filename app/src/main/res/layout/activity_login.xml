@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/loginBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_20"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/loginBackButton"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextEmailOrPhone"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:maxLines="1"
+        android:background="@drawable/drawable__gray_stoke_button_bg_40"
+        android:hint="@string/email_or_phone_number"
+        android:padding="@dimen/dimen_10"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_dark"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSignIn" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_50"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@drawable/drawable__gray_stoke_button_bg_40"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:padding="@dimen/dimen_10"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_dark"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailOrPhone" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:elevation="@dimen/dimen_5"
+        android:background="@drawable/drawable__details_button_40"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:text="@string/or"
+        android:textColor="@color/color_FF0025"
+        android:textSize="@dimen/dimen_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLogin" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutFacbook"
+        android:layout_width="@dimen/dimen_0"
+        android:elevation="@dimen/dimen_5"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@drawable/drawable__details_button_40"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOr">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_with_facebook"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

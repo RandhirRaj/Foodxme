@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.02" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:text="Our Special Buffets"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/breakfastBuffets"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_marginEnd="@dimen/dimen_10"
+        android:textColor="@color/black"
+        android:checked="true"
+        android:textSize="@dimen/dimen_14sp"
+        android:text="Breakfast Buffets"
+        app:buttonTint="@color/checked_text_color"
+        app:layout_constraintEnd_toStartOf="@+id/lunchBuffets"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/lunchBuffets"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_10"
+        android:textSize="@dimen/dimen_14sp"
+        android:textColor="@color/gray_dark"
+        app:buttonTint="@color/checked_text_color"
+        android:text="Lunch Buffets"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/dessertBuffets"
+        app:layout_constraintStart_toEndOf="@+id/breakfastBuffets"
+        app:layout_constraintTop_toTopOf="@+id/breakfastBuffets" />
+
+    <androidx.appcompat.widget.AppCompatCheckedTextView
+        android:id="@+id/dessertBuffets"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_14sp"
+        android:textColor="@color/gray_dark"
+        android:text="Dessert Buffets"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toEndOf="@+id/lunchBuffets"
+        app:layout_constraintTop_toTopOf="@+id/breakfastBuffets" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutDeliveryInfoDropDown"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@drawable/white_corner_10_bg"
+        android:elevation="@dimen/dimen_5"
+        android:padding="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/breakfastBuffets">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:text="Delivery info"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dropdown" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/layoutCartNew"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_5"
+        android:layout_marginTop="@dimen/dimen_10"
+        app:cardElevation="@dimen/dimen_3"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutDeliveryInfoDropDown">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen_7">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/layoutImageAvailable"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_margin="@dimen/dimen_5"
+                app:cardCornerRadius="@dimen/dimen_5"
+                app:cardElevation="@dimen/dimen_0"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewProductCustomise"
+                app:layout_constraintDimensionRatio="H,4:4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintWidth_percent="0.3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewProductImgUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/soups" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewProductDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layoutImageAvailable"
+                app:layout_constraintTop_toTopOf="@+id/layoutImageAvailable"
+                android:text="Lunch menu otion 1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductDetails"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Finger Food, She Food, Salads, main dishes, Dessert, fruits and beverages "
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewProductPrice"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginTop="@dimen/dimen_5"
+                android:drawableLeft="@drawable/ic_dollar_currency_symbol"
+                android:drawablePadding="@dimen/dimen_5"
+                android:gravity="center_vertical"
+                android:text="Service 15 person"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewProductCustomise"
+                app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductDetails" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductCustomise"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:drawablePadding="@dimen/dimen_5"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="$ 800.20"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutImageAvailable"
+                app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductPrice" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

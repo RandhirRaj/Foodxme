@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.randhir.foodxme.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_dashboard"
+            app:destination="@id/navigation_categories" />
+        <action
+            android:id="@+id/action_navigation_home_to_hotSaleFragment"
+            app:destination="@id/hotSaleFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_topPickFragment"
+            app:destination="@id/topPickFragment" >
+
+            <argument
+                android:name="topPick"
+                app:nullable="false"
+                app:argType="com.randhir.foodxme.model.bestsellers.Bestsellers"/>
+        </action>
+        <action
+            android:id="@+id/action_navigation_home_to_productDetails"
+            app:destination="@id/productDetails" />
+        <action
+            android:id="@+id/action_navigation_home_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_galleyFragment"
+            app:destination="@id/galleyFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_favouriteOrderFragment"
+            app:destination="@id/favouriteOrderFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_cateringsFragment"
+            app:destination="@id/cateringsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_inviteFriendsFragment"
+            app:destination="@id/inviteFriendsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_couponsFragments"
+            app:destination="@id/couponsFragments" />
+        <action
+            android:id="@+id/action_navigation_home_to_productFragment"
+            app:destination="@id/productFragment" >
+
+            <argument
+                android:name="Id"
+                android:defaultValue="0"
+                app:argType="string" />
+
+        </action>
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="com.randhir.foodxme.ui.dashboard.CategoriesFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_productFragment"
+            app:destination="@id/productFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+            <argument
+                android:name="Id"
+                android:defaultValue="0"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_navigation_categories_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hotSaleFragment"
+        android:name="com.randhir.foodxme.ui.hotsel.HotSaleFragment"
+        android:label="@string/hot_sale"
+        tools:layout="@layout/fragment_hot_sale" >
+        <action
+            android:id="@+id/action_hotSaleFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.randhir.foodxme.ui.homesearch.SearchFragment"
+        android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.randhir.foodxme.ui.product.ProductFragment"
+        android:label="ProductFragment" >
+
+        <argument
+            android:name="Id"
+            android:defaultValue="0"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_productFragment_to_productDetails"
+            app:destination="@id/productDetails" />
+        <action
+            android:id="@+id/action_productFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/productDetails"
+        android:name="com.randhir.foodxme.model.product.ProductDetails"
+        android:label="ProductDetails"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim">
+
+        <argument
+            android:name="Id"
+            android:defaultValue="0"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_productDetails_to_cartFragment"
+            app:destination="@id/cartFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.randhir.foodxme.ui.cart.CartFragment"
+        android:label="CartFragment" />
+    <fragment
+        android:id="@+id/topPickFragment"
+        android:name="com.randhir.foodxme.ui.toppick.TopPickFragment"
+        android:label="TopPickFragment" >
+
+        <argument
+            android:name="topPick"
+            app:argType="com.randhir.foodxme.model.bestsellers.Bestsellers"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/action_topPickFragment_to_productDetails"
+            app:destination="@id/productDetails" >
+
+            <argument
+                android:name="Id"
+                android:defaultValue="0"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_topPickFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.rst.cashit.ui.order.OrderFragment"
+        android:label="OrderFragment" >
+        <action
+            android:id="@+id/action_orderFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleyFragment"
+        android:name="com.randhir.foodxme.ui.gallery.GalleyFragment"
+        android:label="GalleyFragment" />
+    <fragment
+        android:id="@+id/favouriteOrderFragment"
+        android:name="com.randhir.foodxme.ui.favourat.FavouriteOrderFragment"
+        android:label="fragment_favourite_order"
+        tools:layout="@layout/fragment_favourite_order" >
+        <action
+            android:id="@+id/action_favouriteOrderFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cateringsFragment"
+        android:name="com.randhir.foodxme.ui.catering.CateringsFragment"
+        android:label="CateringsFragment" >
+        <action
+            android:id="@+id/action_cateringsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_cateringsFragment_to_cateringsResultsFragment"
+            app:destination="@id/cateringsResultsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inviteFriendsFragment"
+        android:name="com.randhir.foodxme.ui.invite.InviteFriendsFragment"
+        android:label="InviteFriendsFragment" />
+    <fragment
+        android:id="@+id/couponsFragments"
+        android:name="com.randhir.foodxme.ui.coupons.CouponsFragments"
+        android:label="CouponsFragments" >
+        <action
+            android:id="@+id/action_couponsFragments_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cateringsResultsFragment"
+        android:name="com.randhir.foodxme.ui.catering.CateringsResultsFragment"
+        android:label="CateringsResultsFragment" >
+        <action
+            android:id="@+id/action_cateringsResultsFragment_to_cateringsResultsDetailsFragment"
+            app:destination="@id/cateringsResultsDetailsFragment" >
+
+            <argument
+                android:name="FromTab"
+                android:defaultValue="0"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_cateringsResultsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cateringsResultsDetailsFragment"
+        android:name="com.randhir.foodxme.ui.catering.CateringsResultsDetailsFragment"
+        android:label="CateringsResultsDetailsFragment" >
+
+        <argument
+            android:name="FromTab"
+            android:defaultValue="0"
+            app:argType="string" />
+
+    </fragment>
+</navigation>

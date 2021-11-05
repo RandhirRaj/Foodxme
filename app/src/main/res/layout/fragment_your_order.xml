@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTodayOrder"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/locationTypeHome"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:background="@drawable/check_box_selecter"
+            android:checked="true"
+            android:elevation="@dimen/dimen_5"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_3"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingBottom="@dimen/dimen_3"
+            android:text="Today"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/locationTypeWork"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/locationTypeWork"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:background="@drawable/check_box_selecter"
+            android:elevation="@dimen/dimen_5"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_3"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingBottom="@dimen/dimen_3"
+            android:text="Upcoming"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/locationTypeOther"
+            app:layout_constraintStart_toEndOf="@+id/locationTypeHome"
+            app:layout_constraintTop_toTopOf="@+id/locationTypeHome" />
+
+        <androidx.appcompat.widget.AppCompatCheckedTextView
+            android:id="@+id/locationTypeOther"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:background="@drawable/check_box_selecter"
+            android:elevation="@dimen/dimen_5"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dimen_15"
+            android:paddingTop="@dimen/dimen_3"
+            android:paddingRight="@dimen/dimen_15"
+            android:paddingBottom="@dimen/dimen_3"
+            android:text="History"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/locationTypeWork"
+            app:layout_constraintTop_toTopOf="@+id/locationTypeHome" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedTodayView"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            android:fillViewport="true"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationTypeHome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_duration"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:text="Duration"
+                    android:textColor="@color/color_F7313F"
+                    android:textSize="@dimen/dimen_14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDurationValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="45 min"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDuration"
+                    app:layout_constraintStart_toEndOf="@+id/textViewDuration"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDuration" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEstimateArrival"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:drawableLeft="@drawable/ic_estimate_arrival"
+                    android:drawablePadding="@dimen/dimen_8"
+                    android:text="Estimate arrival"
+                    android:textColor="@color/color_F7313F"
+                    android:textSize="@dimen/dimen_14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDuration"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewEstimateArrivalValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDuration" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewEstimateArrivalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:text="45 min"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDuration"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDuration" />
+
+                <View
+                    android:id="@+id/recyclerViewDivide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDuration" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewitemView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_5"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewDivide">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginTop="@dimen/dimen_10"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:layout_marginBottom="@dimen/dimen_10">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/layoutMenu"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_15"
+                            app:layout_constraintEnd_toStartOf="@+id/textViewItemPrice"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textViewItemName"
+                                android:layout_width="@dimen/dimen_0"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dimen_10"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Grilled Chicken"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/dimen_16sp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/textViewItemCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dimen_10"
+                                android:text="X 1"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/dimen_14sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textViewItemName"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$ 28.99"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dimen_5"
+                            android:text="with fresh vegetable and rice"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/dimen_12sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/layoutMenu" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewOrderToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerViewDivide" />
+
+                <View
+                    android:id="@+id/viewOrderToday"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:background="@drawable/green_circle"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewOrderPlaced"
+                    app:layout_constraintStart_toStartOf="@+id/textViewOrderPlaced"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewitemView" />
+
+                <View
+                    android:id="@+id/viewOrderTodayLine"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@color/green"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewOrderToday"
+                    app:layout_constraintEnd_toStartOf="@+id/viewOrderProcess"
+                    app:layout_constraintStart_toEndOf="@+id/viewOrderToday"
+                    app:layout_constraintTop_toTopOf="@+id/viewOrderToday" />
+
+                <View
+                    android:id="@+id/viewOrderProcess"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:background="@drawable/green_circle"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewOrderToday"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewOrderProcess"
+                    app:layout_constraintStart_toStartOf="@+id/textViewOrderProcess"
+                    app:layout_constraintTop_toTopOf="@+id/viewOrderToday" />
+
+                <View
+                    android:id="@+id/viewOrderTodayOrderProcessLine"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:background="@color/green"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewOrderToday"
+                    app:layout_constraintEnd_toStartOf="@+id/viewOrderOnTheWay"
+                    app:layout_constraintStart_toEndOf="@+id/viewOrderProcess"
+                    app:layout_constraintTop_toTopOf="@+id/viewOrderToday" />
+
+                <View
+                    android:id="@+id/viewOrderOnTheWay"
+                    android:layout_width="@dimen/dimen_15"
+                    android:layout_height="@dimen/dimen_15"
+                    android:layout_marginStart="@dimen/dimen_30"
+                    android:background="@drawable/green_circle"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewOrderToday"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewOrderOnTheWay"
+                    app:layout_constraintStart_toStartOf="@+id/textViewOrderOnTheWay"
+                    app:layout_constraintTop_toTopOf="@+id/viewOrderToday" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOrderPlaced"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/dimen_20"
+                    android:text="Order placed"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewOrderProcess"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewOrderToday" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOrderProcess"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Order Process"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOrderPlaced"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewOrderOnTheWay"
+                    app:layout_constraintStart_toEndOf="@+id/textViewOrderPlaced"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOrderPlaced" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOrderOnTheWay"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_20"
+                    android:text="On The Way"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOrderPlaced"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewOrderProcess"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOrderPlaced" />
+
+
+                <View
+                    android:id="@+id/trackViewDivide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOrderPlaced" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:text="Total"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trackViewDivide" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTotalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$ 76.68"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewTotal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewCancelOrder"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginRight="@dimen/dimen_20"
+                    android:background="@drawable/red_bg_8dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:text="Cancel Order"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewTrackOrder"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewTrackOrder"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:background="@drawable/gray_bg_8dp"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/dimen_5"
+                    android:paddingBottom="@dimen/dimen_5"
+                    android:text="Track Order"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewCancelOrder"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTotal" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewNoOrderAvailable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/no_orders_available" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewHistory"
+            android:visibility="gone"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_15"
+            app:cardCornerRadius="@dimen/dimen_5"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationTypeHome">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_5"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_5"
+                android:layout_marginBottom="@dimen/dimen_10">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/soups" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/itemOneLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewImageView">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutMenu1"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_15"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewItemPrice1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemName1"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Grilled Chicken"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemCount1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:text="X 1"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textViewItemName1"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewItemPrice1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 28.99"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="with fresh vegetable and rice"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutMenu1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viwItemOneDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/itemOneLayout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/itemTwoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    app:layout_constraintTop_toBottomOf="@+id/viwItemOneDivider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutMenu2"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_15"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewItemPrice2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemName2"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Grilled Chicken"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemCount2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:text="X 1"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textViewItemName2"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewItemPrice2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 28.99"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="with fresh vegetable and rice"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutMenu2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/viwItemThreeDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/itemTwoLayout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/itemThreeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    app:layout_constraintTop_toBottomOf="@+id/viwItemThreeDivider">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutMenu3"
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_15"
+                        app:layout_constraintEnd_toStartOf="@+id/textViewItemPrice3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemName3"
+                            android:layout_width="@dimen/dimen_0"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dimen_10"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="Grilled Chicken"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewItemCount3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_10"
+                            android:text="X 1"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textViewItemName3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewItemPrice3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$ 28.99"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_5"
+                        android:text="with fresh vegetable and rice"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/dimen_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutMenu3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

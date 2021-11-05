@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.MainActivity">
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/layoutCloseDrawable"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="@dimen/dimen_21"-->
+<!--        android:layout_marginTop="@dimen/dimen_40"-->
+<!--        android:background="@drawable/gray_white_stoke"-->
+<!--        android:elevation="@dimen/dimen_5"-->
+<!--        android:padding="@dimen/dimen_2"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/layoutCloseDrawable"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_21"
+            android:layout_marginTop="@dimen/dimen_40"
+            android:elevation="@dimen/dimen_5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/leftGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/rightGuideLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewUserProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_50"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_profile_user" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_30"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:drawableStart="@drawable/ic_edit"
+                android:drawablePadding="@dimen/dimen_10"
+                android:text="Edit"
+                android:textColor="@color/red"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUserProfile"
+                app:layout_constraintTop_toTopOf="@+id/imageViewUserProfile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_5"
+                tools:text="Randhir Raj"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUserProfile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUserEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="raj@gmail.com"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_14sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewUserAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Address"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_14sp"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserEmail" />
+
+            <View
+                android:id="@+id/dividerOne"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUserAddress" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutNotification"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_30"
+                app:layout_constraintEnd_toStartOf="@+id/layoutOffer"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/dividerOne">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_notification" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Notification"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageNotification" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOffer"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutNotification"
+                app:layout_constraintEnd_toStartOf="@+id/layoutSettings"
+                app:layout_constraintStart_toEndOf="@+id/layoutNotification"
+                app:layout_constraintTop_toTopOf="@+id/layoutNotification">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageOffer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_offers" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Offers"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageOffer" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutSettings"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutNotification"
+                app:layout_constraintEnd_toStartOf="@+id/layoutPayments"
+                app:layout_constraintStart_toEndOf="@+id/layoutOffer"
+                app:layout_constraintTop_toTopOf="@+id/layoutNotification">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_settings" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Settings"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageSettings" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutPayments"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutNotification"
+                app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                app:layout_constraintStart_toEndOf="@+id/layoutSettings"
+                app:layout_constraintTop_toTopOf="@+id/layoutNotification">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imagePayments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_payments" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Payments"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imagePayments" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerTwo"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutNotification" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Food Orders"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/dividerTwo" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutYourOrder"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOrder">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_your_orders"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Your orders"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOffers"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOffers"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFavouriteOrder"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutYourOrder">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFavouriteOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_wishlist"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Favourite orders"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFavouriteOrder"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFavouriteOrder"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerThree"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFavouriteOrder" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewFoodService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Food Orders"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/dividerThree" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFoodCaterings"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFoodService">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFoodCaterings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_caterings"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Caterings"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFoodCaterings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFoodCaterings"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFoodEvents"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFoodCaterings">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFoodEvents"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_events"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Events"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFoodEvents"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFoodEvents"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFoodBookings"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFoodEvents">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewFoodBookings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_bookings"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Bookings"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFoodBookings"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFoodBookings"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerFour"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutFoodBookings" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                android:text="Others"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/dimen_18sp"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/dividerFour" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOthersCoupons"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOthers">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOthersCoupons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_coupons_rewards"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Coupons &amp; Rewards"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOthersCoupons"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOthersCoupons"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOthersGallery"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOthersCoupons">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOthersGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_gallery"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Gallery"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOthersGallery"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOthersGallery"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutOthersInviteFriends"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideLine"
+                app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                app:layout_constraintTop_toBottomOf="@+id/layoutOthersGallery">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOthersInviteFriends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_15"
+                    android:drawableLeft="@drawable/ic_invite_friends"
+                    android:drawablePadding="@dimen/dimen_15"
+                    android:gravity="center"
+                    android:text="Invite Friends"
+                    android:textColor="@color/light_black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOthersInviteFriends"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOthersInviteFriends"
+                    app:srcCompat="@drawable/ic_right_arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

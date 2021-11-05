@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutLocation"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delivery_at" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDeliveryAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delivery_at"
+            android:textColor="#F7313F"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewLocation"
+            app:layout_constraintTop_toTopOf="@+id/imageViewLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E6 Street, Jumeirah Park, Dubai.."
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintStart_toStartOf="@+id/textViewDeliveryAt"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryAt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewAddressChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change"
+            android:textColor="#F7313F"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintStart_toEndOf="@+id/textViewAddress"
+            app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryAt" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewWithinDelivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewLocation"
+            app:layout_constraintEnd_toStartOf="@+id/textViewWithinTime"
+            app:layout_constraintTop_toTopOf="@+id/imageViewLocation"
+            app:srcCompat="@drawable/ic_within_delivery" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewWithin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/within"
+            android:textColor="#F7313F"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageViewLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewWithinTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45 mins"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewWithin" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLocation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutItemCart"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/dimen_5"
+            app:cardElevation="@dimen/dimen_3"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen_5">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layoutImageAvailable"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_margin="@dimen/dimen_5"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:cardElevation="@dimen/dimen_0"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRemove"
+                    app:layout_constraintDimensionRatio="H,3:3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewProductImgUrl"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/soups" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_active_wishlist" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewProductName"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_marginStart="@dimen/dimen_10"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Grilled Chicken"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewProductDetails"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/layoutImageAvailable"
+                    app:layout_constraintTop_toTopOf="@+id/layoutImageAvailable" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewProductDetails"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_0"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Main Course"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewProductPrice"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewProductName" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewProductPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:drawableRight="@drawable/ic_dropdown"
+                    android:drawablePadding="@dimen/dimen_20"
+                    android:gravity="center_vertical"
+                    android:text="Choice of size :  M"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintBottom_toTopOf="@+id/imageViewRemove"
+                    app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewProductDetails" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewRemove"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/ic_remove_bg"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_5"
+                    app:layout_constraintBottom_toBottomOf="@+id/layoutImageAvailable"
+                    app:layout_constraintStart_toStartOf="@+id/textViewProductName"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewProductPrice"
+                    app:srcCompat="@drawable/ic_remove_14" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:layout_marginRight="@dimen/dimen_10"
+                    android:text="1"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRemove"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewRemove"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewRemove" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dimen_10"
+                    android:background="@drawable/ic_remove_bg"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_5"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRemove"
+                    app:layout_constraintStart_toEndOf="@+id/textViewQuantity"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewRemove"
+                    app:srcCompat="@drawable/ic_add_14" />
+
+                <!--                <androidx.appcompat.widget.AppCompatTextView-->
+                <!--                    android:id="@+id/textViewProductCustomise"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="@dimen/dimen_0"-->
+                <!--                    android:layout_marginTop="@dimen/dimen_10"-->
+                <!--                    android:drawableRight="@drawable/ic_customize_next"-->
+                <!--                    android:drawablePadding="@dimen/dimen_5"-->
+                <!--                    android:ellipsize="end"-->
+                <!--                    android:maxLines="1"-->
+                <!--                    android:text="Customise"-->
+                <!--                    android:textColor="@color/red"-->
+                <!--                    android:textSize="@dimen/dimen_16sp"-->
+                <!--                    app:layout_constraintBottom_toBottomOf="@+id/layoutImageAvailable"-->
+                <!--                    app:layout_constraintStart_toStartOf="@+id/textViewProductName"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/textViewProductPrice" />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewQuickOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dimen_10"
+                    android:paddingTop="@dimen/dimen_1"
+                    android:paddingRight="@dimen/dimen_10"
+                    android:paddingBottom="@dimen/dimen_1"
+                    android:text="$ 20.99"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewRemove"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewRemove" />
+
+
+                <!--            </androidx.cardview.widget.CardView>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupForOrder"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/layoutItemCart">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButtonOrderNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/order_now"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_16sp"
+            android:theme="@style/RadioButtonTheme" />
+
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/radioButtonOrderLatter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:text="@string/order_latter"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_16sp"
+            android:theme="@style/RadioButtonTheme" />
+
+    </RadioGroup>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDeliveryDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:drawableLeft="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/dimen_10"
+        android:text="@string/delivery_date"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupForOrder" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtViewDate"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_corner_5_bg"
+        android:elevation="@dimen/dimen_5"
+        android:padding="@dimen/dimen_6"
+        android:text="DD/MM/YYYY"
+        android:textColor="@color/gray_dark"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDeliveryDate"
+        app:layout_constraintWidth_percent="0.55" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_0"
+        android:layout_marginLeft="@dimen/dimen_20"
+        android:background="@drawable/white_corner_5_bg"
+        android:elevation="@dimen/dimen_5"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewDate"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toEndOf="@+id/txtViewDate"
+        app:layout_constraintTop_toTopOf="@+id/txtViewDate">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5"
+            android:text="Time"
+            android:textColor="@color/gray_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_dropdown" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/viewDateDivider"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewDate" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewPaymentSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:text="Payment Summary"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_18sp"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/viewDateDivider" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewBasketTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="Basket total"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPaymentSummary" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewBasketTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 42.00"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/textViewBasketTotal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewBasketCouponDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="Coupon Discount"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBasketTotal" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewCouponDiscountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply Promo Code"
+        android:textColor="@color/color_FF2b16"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/textViewBasketCouponDiscount" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="Basket total"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCouponDiscountValue" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDeliveryValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Free"
+        android:textColor="@color/gray_dark"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/textViewDelivery" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTotalGrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:text="TotalGrand"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDelivery" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTotalGrandValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 35.99"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_16sp"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintTop_toTopOf="@+id/textViewTotalGrand" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_20"
+        app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+        app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalGrand">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewMasterCard"
+            android:layout_width="@dimen/dimen_48"
+            android:layout_height="@dimen/dimen_48"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mastercard" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPayUsing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_10"
+            android:drawableRight="@drawable/ic_dropdown"
+            android:drawablePadding="@dimen/dimen_10"
+            android:text="Pay Using"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewMasterCard"
+            app:layout_constraintStart_toEndOf="@+id/imageViewMasterCard" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewCardHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Randhir Credit"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewMasterCard" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="@dimen/dimen_0"
+            android:layout_marginLeft="@dimen/dimen_30"
+            android:background="@drawable/red_bg"
+            android:padding="@dimen/dimen_10"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewCardHolder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPayUsing"
+            app:layout_constraintTop_toTopOf="@+id/imageViewMasterCard">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ 35.99"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dimen_16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_0"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/imageDivider1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProductImage"
+                app:layout_constraintTop_toTopOf="@+id/imageViewProductImage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewProductImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="H,9:16"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/tandoori_chicken" />
+
+            <View
+                android:id="@+id/viewGradient"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0"
+                android:background="@drawable/gradiant_white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProductImage"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0"
+                android:background="@drawable/gradiant_white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProductImage"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0"
+                android:background="@drawable/gradiant_white"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewProductImage"
+                app:layout_constraintTop_toBottomOf="@+id/imageDivider1" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductName"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_30"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:gravity="center"
+                android:text="Lunch menu otion 1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/viewGradient"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/viewGradient" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductDetails"
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginEnd="@dimen/dimen_10"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/dimen_5"
+                android:text="Finger Food, She Food, Salads, main dishes, Dessert, fruits and beverages"
+                android:textColor="@color/gray_dark"
+                android:textSize="@dimen/dimen_16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductName" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textViewProductPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:text="$ 800.20"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dimen_20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductDetails" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="@dimen/dimen_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_20"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewProductPrice">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/leftGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/rightGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.97" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewSetUpTime"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/dimen_5"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewServes"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewSetUp"
+                            android:layout_width="@dimen/dimen_40"
+                            android:layout_height="@dimen/dimen_40"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewSetUpTime"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            app:srcCompat="@drawable/ic_estimate_arrival" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewSetUpTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewSetUpTimeValue"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageViewSetUp"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewSetUpTimeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Hours"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewSetUpTime"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewServes"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/dimen_5"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toStartOf="@+id/cardViewService"
+                    app:layout_constraintStart_toEndOf="@+id/cardViewSetUpTime"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewServes"
+                            android:layout_width="@dimen/dimen_40"
+                            android:layout_height="@dimen/dimen_40"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewServes"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            app:srcCompat="@drawable/ic_serves" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewServes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewServesValue"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageViewServes"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewServesValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Hours"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewServes"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewService"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/dimen_5"
+                    app:cardCornerRadius="@dimen/dimen_5"
+                    app:cardUseCompatPadding="true"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintStart_toEndOf="@+id/cardViewServes"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dimen_5">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewService"
+                            android:layout_width="@dimen/dimen_40"
+                            android:layout_height="@dimen/dimen_40"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewService"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed"
+                            app:srcCompat="@drawable/ic_service" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewService"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Setup Time"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintBottom_toTopOf="@+id/textViewServiceValue"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imageViewService"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textViewServiceValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2 Hours"
+                            android:textColor="@color/gray_dark"
+                            android:textSize="@dimen/dimen_14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textViewService"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:text="Option"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dimen_16sp"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewSetUpTime" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewOptionValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_5"
+                    android:text="(required)"
+                    android:textColor="@color/gray_dark"
+                    android:textSize="@dimen/dimen_14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewOption"
+                    app:layout_constraintStart_toEndOf="@+id/textViewOption"
+                    app:layout_constraintTop_toTopOf="@+id/textViewOption" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutOptionDropDown"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@drawable/white_corner_10_bg"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewOption">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:text="Finger Foods"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_dropdown" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewVegetableSpringRolls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:text="Vegetable Spring Rolls"
+                    android:textColor="@color/gray_dark"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutOptionDropDown" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioVegetableSpringRolls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVegetableSpringRolls" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewCocktailSausag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Cocktail Sausag"
+                    android:textColor="@color/gray_dark"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewVegetableSpringRolls" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioCocktailSausag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/textViewCocktailSausag" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewChesseBites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:text="Chesse Bites"
+                    android:textColor="@color/gray_dark"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewCocktailSausag" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/radioChesseBites"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintTop_toTopOf="@+id/textViewChesseBites" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutSaladsDropDown"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_marginTop="@dimen/dimen_10"
+                    android:background="@drawable/white_corner_10_bg"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewChesseBites">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:text="Salads"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_dropdown" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutMainDishesDropDown"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="@dimen/dimen_50"
+                    android:layout_marginTop="@dimen/dimen_5"
+                    android:background="@drawable/white_corner_10_bg"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@+id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutSaladsDropDown">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="wrap_content"
+                        android:text="Main Dishes"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_dropdown" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <View-->
+                <!--                    android:id="@+id/viewRemoveAndAddDivider"-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/layoutMainDishesDropDown"-->
+                <!--                    android:layout_marginTop="@dimen/dimen_10"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/dimen_1"-->
+                <!--                    android:background="@color/gray_light"/>-->
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutRemoveAndAdd"
+                    android:layout_width="@dimen/dimen_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:layout_marginBottom="@dimen/dimen_10"
+                    android:elevation="@dimen/dimen_5"
+                    android:padding="@dimen/dimen_10"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/rightGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/leftGuideLine"
+                    app:layout_constraintTop_toBottomOf="@+id/layoutMainDishesDropDown">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutRemove"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:background="@drawable/gray_white_stoke"
+                        android:elevation="@dimen/dimen_5"
+                        android:padding="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_remove" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewServesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:text="Serves"
+                        android:textColor="@color/gray_dark"
+                        android:textSize="@dimen/dimen_16sp"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewServesCountValue"
+                        app:layout_constraintStart_toEndOf="@+id/layoutRemove"
+                        app:layout_constraintTop_toTopOf="@+id/layoutRemove"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textViewServesCountValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:layout_marginEnd="@dimen/dimen_5"
+                        android:text="15"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dimen_18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="@+id/layoutRemove"
+                        app:layout_constraintEnd_toStartOf="@+id/layoutAdd"
+                        app:layout_constraintStart_toEndOf="@+id/layoutRemove"
+                        app:layout_constraintTop_toBottomOf="@+id/textViewServesCount"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutAdd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dimen_5"
+                        android:background="@drawable/gray_white_stoke"
+                        android:elevation="@dimen/dimen_5"
+                        android:padding="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="@+id/layoutRemove"
+                        app:layout_constraintStart_toEndOf="@+id/textViewServesCount"
+                        app:layout_constraintTop_toTopOf="@+id/layoutRemove">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/dimen_5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_add" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="@dimen/dimen_0"
+                        android:layout_height="@dimen/dimen_0"
+                        android:layout_marginStart="@dimen/dimen_20"
+                        android:background="@drawable/drawable__details_button"
+                        android:elevation="@dimen/dimen_5"
+                        app:layout_constraintBottom_toBottomOf="@+id/layoutRemove"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/layoutAdd"
+                        app:layout_constraintTop_toTopOf="@+id/layoutRemove">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add to basket"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen_16sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!--                <View-->
+                <!--                    app:layout_constraintTop_toBottomOf="@+id/layoutRemoveAndAdd"-->
+                <!--                    android:layout_marginTop="@dimen/dimen_10"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="@dimen/dimen_1"-->
+                <!--                    android:background="@color/gray_light"/>-->
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:elevation="@dimen/dimen_5"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewActionBarName"
+            android:layout_width="@dimen/dimen_0"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dimen_16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutCart"
+            app:layout_constraintStart_toEndOf="@+id/imageViewBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/layoutCart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_10"
+            android:elevation="@dimen/dimen_5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_cart" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

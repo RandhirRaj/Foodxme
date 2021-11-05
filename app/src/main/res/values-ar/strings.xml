@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Foodxme</string>
+    <string name="title_home">الصفحة الرئيسية</string>
+    <string name="title_dashboard">لوحة القيادة</string>
+    <string name="title_notifications">إشعارات</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="menu_book">قائمة</string>
+    <string name="favourite_orders">المفضل</string>
+    <string name="hot_sale">عرض ساخن</string>
+
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+
+    <string name="no_internet">بدون انترنت</string>
+    <string name="error_msg">حدث خطأ ما في الاتصال بالإنترنت</string>
+
+    <string name="product_price">%.2f</string>
+    <string name="email_or_phone_number">البريد الإلكتروني أو رقم الهاتف</string>
+    <string name="password">كلمة المرور</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="log_in">Log In</string>
+    <string name="or">OR</string>
+    <string name="login_with_facebook">Login with facebook</string>
+    <string name="welcome_to_bites">Welcome to bites</string>
+    <string name="description_is_here">Description is here</string>
+    <string name="signup">SignUp</string>
+    <string name="continue_as_a_gest">Continue as a gest</string>
+    <string name="create_new_account">Create new account</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="enter_email_id">Enter Email Id</string>
+    <string name="every_bite_takes_you_home">Every bite takes you home</string>
+    <string name="bookings">Bookings</string>
+    <string name="delivery_at">Delivery at</string>
+    <string name="change">Change</string>
+    <string name="within">Within</string>
+    <string name="order_now">Order Now</string>
+    <string name="order_latter">Order Latter</string>
+    <string name="delivery_date">Delivery Date</string>
+</resources>

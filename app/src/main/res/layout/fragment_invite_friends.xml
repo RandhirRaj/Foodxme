@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_50"
+        android:elegantTextHeight="true"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dimen_10"
+        android:text="Invite your friend &amp; \nget Points for each friends"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutPromoCode"
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_30"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:layout_marginEnd="@dimen/dimen_30"
+        android:background="@drawable/gray_white_stoke"
+        android:elevation="@dimen/dimen_5"
+        android:paddingTop="@dimen/dimen_10"
+        android:paddingBottom="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeader">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPromo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share your promo code"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/dimen_14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPromoCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elegantTextHeight="true"
+            android:text="37648"
+            android:textColor="@color/color_F7313F"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPromo"
+            app:lineHeight="@dimen/dimen_50" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_15"
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPromoCode"
+            app:layout_constraintStart_toEndOf="@+id/textViewPromoCode"
+            app:srcCompat="@drawable/ic_share_prmo_code" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_10"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:layout_marginBottom="@dimen/dimen_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPromoCode"
+        app:srcCompat="@drawable/ic_star_user" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="@dimen/dimen_0"
+        android:lineSpacingExtra="@dimen/dimen_5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dimen_16sp"
+        android:id="@+id/textViewShareDetails"
+        android:text="If a friends installs the app using your promo code and make there first order you will get 100 points to redeem with great rewards"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_20"
+        app:layout_constraintEnd_toEndOf="@+id/layoutPromoCode"
+        app:layout_constraintStart_toStartOf="@+id/layoutPromoCode"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewStar" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dimen_0"
+        android:layout_height="@dimen/dimen_45"
+        android:layout_marginTop="@dimen/dimen_30"
+        android:background="@drawable/drawable__details_button"
+        android:elevation="@dimen/dimen_5"
+        app:layout_constraintEnd_toEndOf="@+id/layoutPromoCode"
+        app:layout_constraintStart_toStartOf="@+id/layoutPromoCode"
+        app:layout_constraintTop_toBottomOf="@+id/textViewShareDetails">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share promo code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dimen_16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
